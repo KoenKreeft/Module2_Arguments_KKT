@@ -1,0 +1,17 @@
+def greet(name,template= "Hello, <name>!"):
+    greet = template.replace("<name>",name)
+    return greet
+
+print(greet('Edwin'))  # Output: Hello, Edwin!
+print(greet('', 'Hi Marc, how are you?'))  # Output: Hi, Marc how are you?
+
+def force(mass,body='earth'):
+    gravity_dict = {'pluto': 0.7, 'jupiter': 23.1, 'neptune': 11.0, 'saturn': 9.0, 'earth': 9.8, 'uranus': 8.7, 'venus': 8.9, 'mars': 3.7, 'mercury': 3.7, 'moon': 1.6}
+    gravity = round(gravity_dict[body.lower()],1)
+    force = mass * gravity
+    return force
+
+def pull(m1, m2, d):
+    gravitational_constant = 6.674*(10**-11)
+    pull = gravitational_constant * (m1*m2)/(d**2)
+    return pull
